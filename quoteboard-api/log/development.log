@@ -225,3 +225,113 @@ Processing by Api::V1::QuotesController#index as HTML
 Completed 200 OK in 95ms (Views: 90.1ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 15:33:53 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (1.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 15:33:59 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (11.5ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 34ms (Views: 22.5ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 15:38:02 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (1.0ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 15:40:07 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (0.4ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 76ms (Views: 75.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 15:41:37 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (0.3ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 15:41:57 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (62.9ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 80ms (Views: 17.3ms | ActiveRecord: 62.9ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 15:42:39 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (0.4ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 100ms (Views: 99.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 15:44:16 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (0.5ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 110ms (Views: 109.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 16:41:45 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (12.4ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 124ms (Views: 111.6ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 17:01:53 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (9.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 41ms (Views: 27.6ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 17:02:43 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (0.7ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 83ms (Views: 81.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/results" for ::1 at 2018-07-22 17:16:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/results"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 17:18:47 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (1.4ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 17:20:22 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (0.7ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 17:21:07 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (4.9ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 27ms (Views: 21.7ms | ActiveRecord: 4.9ms)
+
+
