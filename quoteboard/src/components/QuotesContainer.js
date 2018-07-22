@@ -2,30 +2,40 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'; 
 import BootstrapTable from 'react-bootstrap-table-next';
+import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
+import paginationFactory from 'react-bootstrap-table2-paginator';
 
 class QuotesContainer extends Component {
   state = {
     quotes: [],
     columns: [{
       dataField: 'id',
-      text: 'ID'
+      text: 'ID',
+      sort: true
     },
     {
       dataField: 'context',
-      text: 'Context'
+      text: 'Context',
+      sort: true,
+      filter: textFilter()
     }, 
     {
       dataField: 'quote',
-      text: 'Quote'
+      text: 'Quote',
+      sort: true,
+      filter: textFilter()
     },
     {
       dataField: 'source',
-      text: 'Source'
+      text: 'Source',
+      sort: true,
+      filter: textFilter()
     },
     {
       dataField: 'theme',
       text: 'Theme',
-      sort: true
+      sort: true,
+      filter: textFilter()
     }]
   }
 
@@ -46,7 +56,10 @@ class QuotesContainer extends Component {
         hover
         keyField='id' 
         data={ this.state.quotes } 
-        columns={ this.state.columns } />
+        columns={ this.state.columns } 
+        filter={ filterFactory() } 
+        pagination={ paginationFactory() }
+        headerClasses={"header"} />
       </div>
     );
   }

@@ -1,7 +1,9 @@
 .App-header {
   height: 150px;
-  padding: 20px;
+  padding: 50px;
   text-align: center;
+  color: #7068FF;
+  font-family: Garamond;
 }
 
 
@@ -9,14 +11,19 @@
   font-size: large;
 }
 
-.tile {
-  /*height: 150px;
-  width: 150px;*/
-  margin: 10px;
-  background: lightyellow;
-  float: left;
+.header {
+  /*height: 150px;*/
+  width: 200px;
+  margin: 50px;
+  padding: 25px, 50px;
+  background: #809FFF;
+  /*float: left;*/
   font-size: 18px;
   text-align: left;
 }
- 
+ .container {
+  padding: 25px;
+  max-width: 500px;
+  margin: auto;
+ }
  
