@@ -1,0 +1,185 @@
+  [1m[35m (40.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3015326207878902225)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateQuotes (20180720200425)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.9ms)[0m  [1m[35mCREATE TABLE "quotes" ("id" bigserial primary key, "quote" character varying, "context" character varying, "source" character varying, "theme" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180720200425"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-07-20 20:05:11.211616"], ["updated_at", "2018-07-20 20:05:11.211616"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3015326207878902225)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "That's thirty minutes away. I'll be there in ten."], ["context", "Pulp Fiction"], ["source", "The Wolf"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.370670"], ["updated_at", "2018-07-20 20:10:27.370670"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "The first rule of Fight Club is: you do not talk about Fight Club. The second rule of Fight Club is: you DO NOT talk about Fight Club."], ["context", "Fight Club"], ["source", "Tyler Durden"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.373757"], ["updated_at", "2018-07-20 20:10:27.373757"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "See that thing on my belt? Grab it! Whatever you do, don’t let go."], ["context", "Batman"], ["source", "Batman"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.375687"], ["updated_at", "2018-07-20 20:10:27.375687"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "My momma always said, ‘Life was like a box of chocolates. You never know what you’re gonna get."], ["context", "Forrest Gump"], ["source", "Forrest Gump"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.378326"], ["updated_at", "2018-07-20 20:10:27.378326"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "Ray, next time someone asks you if you’re a god, you say YES!"], ["context", "Ghostbusters"], ["source", "Winston Zeddemore"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.380044"], ["updated_at", "2018-07-20 20:10:27.380044"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "They’ve done studies, you know. Sixty percent of the time, it works every time."], ["context", "Anchorman"], ["source", "Brian Fantana"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.381676"], ["updated_at", "2018-07-20 20:10:27.381676"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "This is so bad it’s gone past good and back to bad again."], ["context", "Ghost World"], ["source", "Enid"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.383344"], ["updated_at", "2018-07-20 20:10:27.383344"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "Go that way, really fast. If something gets in your way, turn."], ["context", "Better Off Dead"], ["source", "Charles De Mar"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.385275"], ["updated_at", "2018-07-20 20:10:27.385275"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "Put. That coffee. Down. Coffee's for closers only."], ["context", "Glengarry Glen Ross"], ["source", "Blake"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.387085"], ["updated_at", "2018-07-20 20:10:27.387085"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "Good? Bad? I'm the guy with the gun."], ["context", "Army of Darkness"], ["source", "Ash"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.388637"], ["updated_at", "2018-07-20 20:10:27.388637"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "Are you gonna bark all day, little doggy, or are you gonna bite?"], ["context", "Reservoir Dogs"], ["source", "Mr. Blonde"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.390175"], ["updated_at", "2018-07-20 20:10:27.390175"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "There are two types of people in the world - those with a gun, and those who dig. Now dig!"], ["context", "The Good, the Bad, and the Ugly"], ["source", "Blondie"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.391741"], ["updated_at", "2018-07-20 20:10:27.391741"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "If you try to run, I've got six little friends and they can all run faster than you can."], ["context", "From Dusk Til Dawn"], ["source", "Seth"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.393274"], ["updated_at", "2018-07-20 20:10:27.393274"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "Are you gonna do something? Or just stand there and bleed?"], ["context", "Tombstone"], ["source", "Wyatt Earp"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.394693"], ["updated_at", "2018-07-20 20:10:27.394693"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "I love the smell of napalm in the morning"], ["context", "Apocalypse now"], ["source", "Kilgore"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.396319"], ["updated_at", "2018-07-20 20:10:27.396319"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "I could be the walrus. I'd still have to bum rides off people"], ["context", "Ferris Bueller's Day Off"], ["source", "Ferris"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.397993"], ["updated_at", "2018-07-20 20:10:27.397993"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "You either die a hero, or live long enough to see yourself become the villain."], ["context", "The Dark Knight"], ["source", "Harvey Dent"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.399461"], ["updated_at", "2018-07-20 20:10:27.399461"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "If you hold back anything, I'll kill ya. If you bend the truth or I think you're bending the truth, I'll kill ya. If you forget anything, I'll kill ya. In fact, you're gonna have to work very hard to stay alive, Nick. Now, do you understand everything I've just said? 'Cause if you don't, I'll kill ya! Now, Mr Bubble and Squeak, you may enlighten me."], ["context", "Lock, Stock and Two Smoking Barrels"], ["source", "Rory Breaker"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.400942"], ["updated_at", "2018-07-20 20:10:27.400942"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "You should never underestimate the predictability of stupidity."], ["context", "Snatch"], ["source", "Bullet Tooth Tony"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.402787"], ["updated_at", "2018-07-20 20:10:27.402787"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "In the quiet words of the Virgin Mary... come again? "], ["context", "Snatch"], ["source", "Brick Top"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.404512"], ["updated_at", "2018-07-20 20:10:27.404512"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "Heavy is good, heavy is reliable. If it doesn't work you can always hit them with it. "], ["context", "Snatch"], ["source", "Boris 'The Blade' Yurinov"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.405978"], ["updated_at", "2018-07-20 20:10:27.405978"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "Oh, I'm sorry, did I break your concentration? "], ["context", "Pulp Fiction"], ["source", "Jules"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.407453"], ["updated_at", "2018-07-20 20:10:27.407453"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "Momentum, a function of mass and velocity, is conserved between portals. In layman's terms, speedy thing goes in, speedy thing comes out."], ["context", "Portal"], ["source", "GlaDOS"], ["theme", "games"], ["created_at", "2018-07-20 20:10:27.408944"], ["updated_at", "2018-07-20 20:10:27.408944"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "You talkin' to me?"], ["context", "Taxi Driver"], ["source", "Travis Bickle"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.410416"], ["updated_at", "2018-07-20 20:10:27.410416"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "Are you not entertained! Are you not entertained! Is this not why you are here!"], ["context", "Gladiator"], ["source", "Maximus"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.411592"], ["updated_at", "2018-07-20 20:10:27.411592"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "Here's Johnny"], ["context", "Jack Torrance"], ["source", "The Shining"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.413074"], ["updated_at", "2018-07-20 20:10:27.413074"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "Mama always said life was like a box of chocolates. You never know what you're gonna get."], ["context", "Forest Gump"], ["source", "Forest Gump"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.414816"], ["updated_at", "2018-07-20 20:10:27.414816"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "E.T. phone home"], ["context", "E.T."], ["source", "E.T. The Extra-Terrestrial"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.416395"], ["updated_at", "2018-07-20 20:10:27.416395"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "Toto, I've got a feeling we're not in Kansas anymore"], ["context", "Dorothy"], ["source", "The Wizard of Oz"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.418045"], ["updated_at", "2018-07-20 20:10:27.418045"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "Open the pod bay doors, please, HAL"], ["context", "2001: A Space Odyssey"], ["source", "Dave"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.419590"], ["updated_at", "2018-07-20 20:10:27.419590"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "I'm not bad. I'm just drawn that way."], ["context", "Who Framed Roger Rabbit"], ["source", "Jessica Rabbit"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.421239"], ["updated_at", "2018-07-20 20:10:27.421239"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "When I first saw you, I thought you were handsome. Then, of course, you spoke."], ["context", "As Good As It Gets"], ["source", "Carol"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.422648"], ["updated_at", "2018-07-20 20:10:27.422648"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "Listen, here's the thing. If you can't spot the sucker in your first half hour at the table, then you ARE the sucker."], ["context", "Rounders"], ["source", "Mike"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.424279"], ["updated_at", "2018-07-20 20:10:27.424279"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "The cake is a lie"], ["context", "Portal"], ["source", "Corpse"], ["theme", "games"], ["created_at", "2018-07-20 20:10:27.425833"], ["updated_at", "2018-07-20 20:10:27.425833"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "Welcome, everybody, to Monday Night Combat! We'd like to remind fans that we're committed to creating a safe, comfortable, enjoyable experience for only our Club-level and VIP guests. Everybody else...pay up for better seats next time!"], ["context", "Monday Night Combat"], ["source", "Mickey"], ["theme", "games"], ["created_at", "2018-07-20 20:10:27.427380"], ["updated_at", "2018-07-20 20:10:27.427380"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "Good men mean well. We just don't always end up doing well"], ["context", "Dead Space 3"], ["source", "Isaac"], ["theme", "games"], ["created_at", "2018-07-20 20:10:27.428812"], ["updated_at", "2018-07-20 20:10:27.428812"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "The next time you raise a hand to me will be the last time you have hands"], ["context", "Game of Thrones"], ["source", "Khaleesi"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.430215"], ["updated_at", "2018-07-20 20:10:27.430215"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "I'm not in the meth business. I'm in the empire business"], ["context", "Breaking Bad"], ["source", "Walter"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.431574"], ["updated_at", "2018-07-20 20:10:27.431574"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "quotes" ("quote", "context", "source", "theme", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["quote", "If you don't like what's being said, change the conversation"], ["context", "Mad Men"], ["source", "Don Draper"], ["theme", "movies"], ["created_at", "2018-07-20 20:10:27.432920"], ["updated_at", "2018-07-20 20:10:27.432920"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/quotes" for 127.0.0.1 at 2018-07-20 15:13:03 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (1.4ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 23ms (Views: 15.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/v1/quotes" for 127.0.0.1 at 2018-07-20 15:17:25 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (0.9ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 16ms (Views: 11.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 14:47:54 -0500
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (11.9ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 38ms (Views: 18.1ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2018-07-22 14:47:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 14:55:32 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (9.5ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 133ms (Views: 53.4ms | ActiveRecord: 78.9ms)
+
+
