@@ -183,3 +183,45 @@ Processing by Api::V1::QuotesController#index as HTML
 Completed 200 OK in 133ms (Views: 53.4ms | ActiveRecord: 78.9ms)
 
 
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 15:10:37 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (1.5ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 92ms (Views: 88.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 15:10:47 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (94.6ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 108ms (Views: 12.5ms | ActiveRecord: 94.6ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 15:10:59 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (1.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 15:11:21 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (0.4ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 82ms (Views: 81.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 15:17:22 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (7.8ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 96ms (Views: 87.5ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 15:20:46 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (0.6ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 105ms (Views: 104.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-22 15:30:31 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (1.5ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 95ms (Views: 90.1ms | ActiveRecord: 1.5ms)
+
+

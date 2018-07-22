@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Quote from './quote'
 
 class QuotesContainer extends Component {
   constructor(props) {
@@ -20,8 +21,12 @@ class QuotesContainer extends Component {
 
   render() {
     return (
-      <div className="">
-        Quotes
+      <div>
+        {this.state.quotes.map((quote) => {
+          return (
+            <Quote quote={quote} key={quote.id} />
+          )
+        })}
       </div>
     );
   }
