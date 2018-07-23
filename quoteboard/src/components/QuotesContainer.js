@@ -22,12 +22,33 @@ class QuotesContainer extends Component {
   render() {
     return (
       <div>
+      <table>
+        <thead>
+          <tr> 
+            <th>ID</th>
+            <th>Context</th> 
+            <th>Quote</th>
+            <th>Source</th>
+            <th>Theme</th>
+          </tr>
+        </thead>
+        <tbody>
         {this.state.quotes.map((quote) => {
           return (
-            <Quote quote={quote} key={quote.id} />
+          <tr>
+            <td>{quote.id}</td>
+            <td>{quote.context}</td> 
+            <td>{quote.quote}</td>
+            <td>{quote.source}</td>
+            <td>{quote.theme}</td>
+          </tr>
           )
         })}
-      </div>
+        </tbody>
+    </table>
+    </div>
+          
+      
     );
   }
 } 
