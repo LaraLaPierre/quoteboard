@@ -30,6 +30,10 @@
  table, th, td {
    border: 1px solid black;
 }
+th, td {
+    padding: 15px;
+    font-family: Garamond;
+}
 
 table {
     width: 100%;
@@ -37,5 +41,8 @@ table {
 
 th {
     height: 50px;
+    font-size: 25px;
+    background-color: #809FFF;
 }
- 
+
+
