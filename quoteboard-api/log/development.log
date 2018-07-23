@@ -485,3 +485,22 @@ Processing by Api::V1::QuotesController#index as HTML
 Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/api/v1/quotes" for ::1 at 2018-07-23 11:04:49 -0500
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (5.8ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 46ms (Views: 23.6ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-23 11:08:59 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (2.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 76ms (Views: 47.1ms | ActiveRecord: 28.4ms)
+
+
+Started GET "/api/v1/quotes" for ::1 at 2018-07-23 11:09:31 -0500
+Processing by Api::V1::QuotesController#index as HTML
+  [1m[36mQuote Load (1.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 1.1ms)
+
+

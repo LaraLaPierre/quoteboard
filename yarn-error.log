@@ -23,7 +23,7 @@ Lockfile:
   No lockfile
 
 Trace: 
-  Error: Couldn't find a package.json file in "/Users/llapierre/Desktop/repos/listboard"
+  Error: Couldn't find a package.json file in "/Users/llapierre/Desktop/repos/quoteboard"
       at new MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
       at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:40048:15
       at Generator.next (<anonymous>)
